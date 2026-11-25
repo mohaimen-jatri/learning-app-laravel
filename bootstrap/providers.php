@@ -5,5 +5,5 @@ use MongoDB\Laravel\MongoDBServiceProvider;
 
 return [
     AppServiceProvider::class,
-    MongoDBServiceProvider::class,z
+    MongoDBServiceProvider::class,
 ];
