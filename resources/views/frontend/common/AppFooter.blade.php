@@ -7,8 +7,8 @@
             </a>
             <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-body">
                 <li><a href="#" class="hover:text-fg-brand hover:underline">About</a></li>
-                <li><a href="#" class="hover:text-fg-brand hover:underline">Services</a></li>
-                <li><a href="#" class="hover:text-fg-brand hover:underline">Pricing</a></li>
+                <li><a href="#" class="hover:text-fg-brand hover:underline">Blog</a></li>
+                <li><a href="#" class="hover:text-fg-brand hover:underline">Categories</a></li>
                 <li><a href="#" class="hover:text-fg-brand hover:underline">Contact</a></li>
                 <li><a href="#" class="hover:text-fg-brand hover:underline">Privacy Policy</a></li>
             </ul>
