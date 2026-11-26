@@ -11,9 +11,8 @@
             </div>
 
             <div class="rounded-base border border-default bg-neutral-primary-soft p-6 shadow-xs sm:p-8">
-                <form action="#" method="POST" class="space-y-5">
+                <form action="{{ route('user.signup.store') }}" method="POST" class="space-y-5">
                     @csrf
-
                     <div>
                         <label for="name" class="mb-2 block text-sm font-medium text-heading">Full name</label>
                         <input
@@ -92,6 +91,9 @@
                             and <a href="#" class="font-medium text-fg-brand hover:underline">Privacy Policy</a>
                         </label>
                     </div>
+                    @error('terms')
+                        <p class="-mt-3 text-sm text-fg-danger">{{ $message }}</p>
+                    @enderror
 
                     <button
                         type="submit"
