@@ -73,6 +73,21 @@
                     Dashboard
                 </a>
             </li>
+            <li>
+                <a
+                    href="{{ route('admin.categories.index') }}"
+                    @class([
+                        'flex items-center gap-3 rounded-base px-3 py-2',
+                        'bg-brand text-white' => request()->routeIs('admin.categories.*'),
+                        'text-heading hover:bg-neutral-secondary-medium' => ! request()->routeIs('admin.categories.*'),
+                    ])
+                >
+                    <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h10"/>
+                    </svg>
+                    Categories
+                </a>
+            </li>
         </ul>
     </div>
 </aside>

@@ -44,6 +44,14 @@
                             </div>
                             <ul class="p-2 text-sm font-medium text-body" aria-labelledby="user-menu-button">
                                 <li>
+                                    <a href="{{ route('user.dashboard') }}" class="flex w-full items-center gap-2 rounded p-2 hover:bg-neutral-tertiary-medium hover:text-heading">
+                                        <svg class="size-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h6v6H4zM14 5h6v4h-6zM14 13h6v6h-6zM4 15h6v4H4z"/>
+                                        </svg>
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="#" class="flex w-full items-center gap-2 rounded p-2 hover:bg-neutral-tertiary-medium hover:text-heading">
                                         <svg class="size-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                             <path stroke="currentColor" stroke-width="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>

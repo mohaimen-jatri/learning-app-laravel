@@ -27,7 +27,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
             ToastMagic::success('Login Success', 'Login Successfully!');
 
-            return redirect()->intended('/');
+            return redirect()->intended(route('user.dashboard'));
         }
 
         return back()->withErrors([
