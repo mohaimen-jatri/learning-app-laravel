@@ -11,7 +11,7 @@
             </div>
 
             <div class="rounded-base border border-default bg-neutral-primary-soft p-6 shadow-xs sm:p-8">
-                <form action="#" method="POST" class="space-y-5">
+                <form action="{{ route('user.login.submit') }}" method="POST" class="space-y-5">
                     @csrf
 
                     <div>

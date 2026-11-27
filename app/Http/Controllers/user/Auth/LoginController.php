@@ -15,6 +15,22 @@ class LoginController extends Controller
         return view('user.auth.login');
     }
 
+    public function login(Request $request) {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/');
+        }
+
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
+    }
+
     /**
      * Log the user out and clear their session.
      */
@@ -26,9 +42,5 @@ class LoginController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/')->with('success', 'Logged out successfully!');
-    }
-
-    public function login() {
-
     }
 }
