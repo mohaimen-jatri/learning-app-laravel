@@ -7,6 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use Devrabiul\ToastMagic\Facades\ToastMagic;
 
 class LoginController extends Controller
 {
@@ -23,9 +24,9 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+            ToastMagic::success('Login Success', 'Login Successfully!.');
             return redirect()->intended('/');
         }
-
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
@@ -40,7 +41,7 @@ class LoginController extends Controller
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-
+        ToastMagic::success('Logout Success', 'Logout Successfully!.');
         return redirect('/')->with('success', 'Logged out successfully!');
     }
 }

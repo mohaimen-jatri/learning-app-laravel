@@ -1465,6 +1465,7 @@
             }
         </style>
     @endif
+    {!! ToastMagic::styles() !!}
 </head>
 <body class="bg-[#FDFDFC] text-[#ffffff] flex p-6 lg:p-8 min-h-screen flex-col">
 <!-- component -->
@@ -1475,5 +1476,6 @@
 @include('user.common.AppFooter')
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+{!! ToastMagic::scripts() !!}
 </body>
 </html>
